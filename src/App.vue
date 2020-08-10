@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <qui-button />
+    <qui-button type="primary1"/>
   </div>
 </template>
 
