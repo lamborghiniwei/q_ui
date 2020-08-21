@@ -7,14 +7,16 @@
     <qui-button type="info">图标按钮</qui-button>
     <!-- 无限滚动 -->
     <div class="infinite-box" 
-      v-infinite-scroll='8888'
-      infinite-scroll-disabled='disabled'
-      infinite-scroll-delay='delay'
-      infinite-scroll-distance='distance'
-      infinite-scroll-immediate='immediate'
+      style="overflow:auto"
     >
-        <ul>
-          <li class="infinite-item" v-for="item in 10" :key="item">{{item}}</li>
+        <ul
+            v-infinite-scroll='load'
+            infinite-scroll-disabled='disabled'
+            infinite-scroll-delay='delay'
+            infinite-scroll-distance='distance'
+            infinite-scroll-immediate='immediate'
+        >
+          <li class="infinite-item" v-for="item in count" :key="item">{{item}}</li>
         </ul>
     </div>
   </div>
@@ -26,7 +28,16 @@ export default {
   name: 'App',
   data () {
     return {
-
+      count: 10,
+      disabled: false,
+      delay: 200,
+      distance: 20,
+      immediate: true
+    }
+  },
+  methods: {
+    load () {
+      this.count += 4
     }
   }
 }
@@ -46,7 +57,6 @@ ul, li {
   height: 300px;
   margin: 100px 0 0 20px;
   border: 1px solid pink;
-  overflow-y: scroll;
 }
 .infinite-item {
   height: 30px;
