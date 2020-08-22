@@ -19,6 +19,7 @@
           <li class="infinite-item" v-for="item in count" :key="item">{{item}}</li>
         </ul>
     </div>
+    
   </div>
 </template>
 
@@ -28,16 +29,21 @@ export default {
   name: 'App',
   data () {
     return {
-      count: 10,
+      count: 2,
       disabled: false,
       delay: 200,
       distance: 20,
       immediate: true
     }
   },
+  // mounted () {
+  //   setInterval(() => {
+  //     this.disabled = true
+  //   }, 5000)
+  // },
   methods: {
     load () {
-      this.count += 4
+      this.count += 2
     }
   }
 }
