@@ -2,7 +2,7 @@
 * @Author: lzw  
 * @Date: 2020-08-21 18:48:45  
  * @Last Modified by: lzw
- * @Last Modified time: 2020-08-25 23:10:48
+ * @Last Modified time: 2020-08-25 23:18:19
 */
 
 //  默认的配置项
@@ -22,7 +22,7 @@ const attributes = {
 }
 const scope = 'infinite-scroll'
 //  合并用户配置项
-//  合并属性时候针对false情况还需要进一步处理优化
+//  合并属性时候针对false情况还需要进一步处理优化 参考实现Object.assign()
 function mergeOption (el, vnode) {
   const options = Object.entries(attributes).reduce((map, [key, valueObj]) => {
     //  console.log(map, key, valueObj)
