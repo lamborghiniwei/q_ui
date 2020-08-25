@@ -1,5 +1,5 @@
 <template>
-  <div>upload</div>
+  <div>upload测试</div>
 </template>
 
 <script>
