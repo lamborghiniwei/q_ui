@@ -2,7 +2,7 @@
 * @Author: lzw  
 * @Date: 2020-08-21 18:48:45  
  * @Last Modified by: lzw
- * @Last Modified time: 2020-08-25 23:18:19
+ * @Last Modified time: 2020-08-26 21:02:50
 */
 
 //  默认的配置项
@@ -104,6 +104,7 @@ export default {
     }
     //  处理开始元素过少撑不满的情况
     //  new MutationObserver MutationObserver接口提供了监视对DOM树所做更改的能力。
+    //  面试问了js比较麻烦的地方,我提了这个
     if (immediate) {
         const observe = el[scope].observe = new MutationObserver(handleScroll.bind(el, callBack))
         observe.observe(container, {
