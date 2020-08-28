@@ -6,7 +6,7 @@
     <qui-button type="info">信息按钮</qui-button>
     <qui-button type="info">图标按钮</qui-button>
     <!-- 无限滚动 -->
-    <div class="infinite-box" 
+    <!-- <div class="infinite-box" 
       style="overflow:auto"
     >
         <ul
@@ -18,7 +18,10 @@
         >
           <li class="infinite-item" v-for="item in count" :key="item">{{item}}</li>
         </ul>
-    </div>
+    </div> -->
+
+    <!-- 文件上传封装 -->
+    <v-upload />
     
   </div>
 </template>
